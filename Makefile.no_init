@@ -1,0 +1,9 @@
+PROGRAM = no_init
+OBJS    = no_init.o
+SRCS	= $(OBJS:%.o=%.c)
+	CC		= gcc
+	CFLAGS	= -g -Wall
+	LDFAGS	=
+
+$(PROGRAM):$(OBJS)
+	$(CC) $(CFLAGS) $(LDFAGS) -o $(PROGRAM) $(OBJS) $(LDFAGS)

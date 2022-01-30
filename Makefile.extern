@@ -1,0 +1,9 @@
+PROGRAM = extern
+OBJS    = extern_sub.o extern_main.o
+SRCS	= $(OBJS:%.o=%.c)
+	CC		= gcc
+	CFLAGS	= -g -Wall
+	LDFAGS	=
+
+$(PROGRAM):$(OBJS)
+	$(CC) $(CFLAGS) $(LDFAGS) -o $(PROGRAM) $(OBJS) $(LDFAGS)
